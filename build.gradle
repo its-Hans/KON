@@ -5,6 +5,12 @@ plugins {
 version project_version
 group project_group
 
+dependencies {
+	implementation 'com.google.guava:guava:33.4.8-jre'
+
+	implementation fileTree(dir: 'libs')
+}
+
 jar {
 	inputs.property('name', name)
 	from('LICENSE') {
